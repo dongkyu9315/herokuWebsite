@@ -1,0 +1,60 @@
+body {
+    background-color: #ffffff;
+	padding-top: 70px;
+	padding-bottom: 100px;
+	margin: 0 auto;
+	font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+
+.navbar-custom {
+	background-color: #800080;
+}
+
+#dropdown-nav {
+	background-color: #800080;
+}
+
+.navbar-custom .navbar-collapse .navbar-nav > li > a,
+.navbar-custom .navbar-collapse .navbar-nav > li > a:focus,
+#dropdown-nav > li > a,
+#dropdown-nav > li > a:focus {
+	color: #ffffff;
+}
+
+.navbar-custom .navbar-collapse .navbar-nav > li > a:hover,
+#dropdown-nav > li > a:hover {
+	color: #800080;
+	background-color: #ffffff;
+}
+
+.navbar-custom .navbar-collapse .navbar-nav .active > a,
+#dropdown-nav > a {
+	color: #800080;
+}
+
+.navbar-custom .navbar-collapse .navbar-nav .active > a:hover,
+#dropdown-nav .active > a:hover {
+	color: #800080;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-brand:hover {
+	color: #ffffff;
+}
+
+#sidenav ul {
+	float: none;
+	display: block;
+}
+
+#sidenav li {
+	float: none;
+	display: block;
+}
+
+#sidenav li a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #000000;
+}

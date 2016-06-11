@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="shortcut icon" href="../static/images/checker.png">
+  
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="stylesheet" href="../static/css/pygment_trac.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="author" content="dongkyu9315@gmail.com, Dong Kyu (Jason) Kim" />
+  <meta name="copyright" content="Copyright 2015 Dong Kyu (Jason) Kim" />
+  
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <!-- navigation bar on the top -->
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="">Dong Kyu (Jason) Kim</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#navHeaderCollapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navHeaderCollapse">
+        <ul class="nav navbar-nav navbar-right">
+          {% block navbar %}
+
+          {% endblock %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container-fluid">
+    <div class="row">
+      {% block bodycontent %}
+
+      {% endblock %}
+    </div>
+  </div>
+  
+  <!-- footer -->
+  <div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <p class="navbar-text pull-left">Copyright 2016 Dong Kyu (Jason) Kim</p>
+      <a class="navbar-btn btn-primary btn pull-right" href="https://github.com/dongkyu9315/dongkyu9315.github.io.git">View this website on GitHub</a>
+    </div>
+  </div>
+  
+  <!-- load scripts at the bottom to load the page faster -->
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/scale.fix.js"></script>
+  <script src="../static/js/mypage.js"></script>
+</body>
+</html>

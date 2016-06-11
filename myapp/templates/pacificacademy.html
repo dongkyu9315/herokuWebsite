@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Pacific Academy{% endblock %}
+
+{% block head %}
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+	var myCenter = new google.maps.LatLng(49.188744,-122.754181);
+	
+	function initialize() {
+		var mapProp = {
+				center:myCenter,
+				zoom:14,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+		};
+		
+		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		
+		var marker=new google.maps.Marker({
+			position:myCenter,
+		});
+		
+		marker.setMap(map);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+{% endblock %}
+
+{% block navbar %}
+<li><a href="../">Home</a></li>
+<li><a href="/McGill/">McGill</a></li>
+<li class="active"><a href="">Pacific Academy</a></li>
+<li class="dropdown">
+	<a class="dropdown-toggle" data-toggle="dropdown" href="">Projects<span class="caret"></span></a>
+	<ul class="dropdown-menu" id="dropdown-nav">
+		<li><a href="/Projects/">Index</a></li>
+	</ul>
+</li>
+{% endblock %}
+
+{% block bodycontent %}
+<!-- section on the left -->
+<div class="col-sm-2">
+	
+</div>
+
+<!-- main body -->
+<div class="col-sm-8">
+	<div class="jumbotron">
+		<h2>Pacific Academy</h2>
+		<div id="googleMap" style="width:500px;height:380px;"></div>
+	</div>
+</div>
+
+<!-- section on the right -->
+<div class="col-sm-2">
+	
+</div>
+{% endblock %}
